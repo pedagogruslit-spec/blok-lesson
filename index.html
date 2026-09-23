@@ -733,13 +733,13 @@ body:not(.edit-mode) .blk-editable{outline:none !important; background:none !imp
     <div class="qreveal" id="rv-s2q3"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s2q3">Жажда вечного, желание одушевить и преобразить мир – и тяжёлый, удушающий «сон» реальной жизни.</p></div>
   </div><div class="note-box gated editable-el reveal" data-id="note-14" data-after="s2q3"><p class="">Лирический герой не бежит из тяжёлого сна и не делает вид, что его нет. Он принимает удушье – и продолжает хотеть жить. Вспомните Пушкина: там душа поэта тоже «вкушает хладный сон» – до тех пор, пока её не разбудит вдохновение.</p></div><div class="note-box editable-el reveal" data-id="note-15"><p style="font-family:'Yeseva One',serif; font-size:15px;" class="">Строфа 3</p></div><div class="qcard reveal" id="q-s3q1">
     <p class="qtext editable-el" data-id="qt-s3q1">К кому обращены мысли лирического героя в третьей строфе?</p>
-    <textarea id="ta-s3q1" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <textarea id="ta-s3q1" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)" style="height: 98px;"></textarea>
     <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
-    <button class="qcheck-btn" id="btn-s3q1" onclick="checkAnswer('s3q1')" aria-label="Проверить ответ">Проверить</button>
+    <button class="qcheck-btn" id="btn-s3q1" onclick="checkAnswer('s3q1')" aria-label="Проверить ответ">Проверить ещё раз</button>
     <div class="qfeedback" id="fb-s3q1" aria-live="polite"></div>
     <div class="qreveal" id="rv-s3q1"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s3q1">К человеку из будущего – «юноше весёлому», который однажды скажет о поэте своё слово.</p></div>
   </div><div class="qcard reveal" id="q-s3q2">
-    <p class="qtext editable-el" data-id="qt-s3q2">Почему именно «юноша» – и почему «весёлый»?</p>
+    <p class="qtext editable-el" data-id="qt-s3q2">Почему именно этот образ выбирает автор?</p>
     <textarea id="ta-s3q2" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
     <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
     <button class="qcheck-btn" id="btn-s3q2" onclick="checkAnswer('s3q2')" aria-label="Проверить ответ">Проверить</button>
@@ -819,7 +819,7 @@ body:not(.edit-mode) .blk-editable{outline:none !important; background:none !imp
     <h2 class="editable-el" data-id="b3-h2">Кто Блок?</h2>
     <p class="section-lead editable-el" data-id="b3-lead">Облако выросло из вашей работы: формулы из биографии, ключевые слова разбора и ваши собственные слова. Чем чаще слово звучало – тем крупнее оно здесь.</p>
   </div>
-  <div class="cloud-box" id="cloudBox"><span class="cloud-empty" id="cloudEmpty">Облако пока пусто – начните с первого эпизода биографии.</span></div>
+  <div class="cloud-box" id="cloudBox" style="min-height: 560px;"><span class="cloud-empty" id="cloudEmpty">Облако пока пусто – начните с первого эпизода биографии.</span></div>
   <div class="finish-panel">
     <button class="finish-btn" onclick="finishWork()" aria-label="Завершить работу и скачать результаты">Завершить работу и скачать результаты</button>
     <div class="qcard reveal" id="aiSummary" aria-live="polite" style="display: none;"></div>
@@ -869,7 +869,7 @@ body:not(.edit-mode) .blk-editable{outline:none !important; background:none !imp
 
 
 <!-- ============ v3: ПАНЕЛЬ РЕДАКТОРА, МЕНЮ, МОДАЛКИ ============ -->
-<div id="blkToolbar" aria-label="Панель редактирования" style="top: 39px;">
+<div id="blkToolbar" aria-label="Панель редактирования" style="top: 109px;">
   <button onclick="blkAddAtEnd()" aria-label="+ Новый блок в конце страницы">+ Новый блок в конце страницы</button>
   <button onclick="blkDuplicateLast()" aria-label="⧉ Дублировать последний блок">⧉ Дублировать последний блок</button>
   <button onclick="blkToggleChrome()" id="blkChromeBtn" aria-label="👁 Скрыть кнопки редактора">👁 Скрыть кнопки редактора</button>
