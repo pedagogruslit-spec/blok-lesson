@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
+<html lang="ru" data-theme="light"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>«Поэт в России – больше, чем поэт». Александр Блок – рабочий лист урока</title>
@@ -624,7 +624,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <button class="tb-btn" id="aiBtn" onclick="openKey()" aria-label="Подключение ИИ-проверки">ИИ: выкл</button>
     <button class="tb-btn" id="soundBtn" onclick="toggleSound()" aria-label="Звук: вкл">Звук: вкл</button>
     <button class="tb-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Музыка ▷">Музыка ▮▮</button>
-    <button class="tb-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Светлая тема">Светлая тема</button>
+    <button class="tb-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Светлая тема">Тёмная тема</button>
     <button class="tb-btn" id="blkSaveTop" onclick="blkSaveToGithub()" aria-label="💾 Сохранить">💾 Сохранить</button>
     <button class="tb-btn" id="editToggle" onclick="askTeacher()" aria-label="🔑 Войти в режим учителя">🔑 Войти в режим учителя</button>
   </div>
@@ -945,7 +945,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
   <div class="login-in key-in">
     <h3>Подключить ИИ-проверку ответов</h3>
     <p>Выберите нейросеть. Ключ – это как пароль для неё; он хранится только в этом браузере и отправляется только выбранному сервису. Без ИИ урок тоже работает.</p>
-    <div class="prov-list" id="provList" role="radiogroup" aria-label="Нейросеть"><button type="button" role="radio" aria-checked="true" class="prov-btn sel" onclick="pickProv('routerai')" aria-label="RouterAI (Россия)российский сервис · серверы в РФ · оплата картой РФ в рублях · без VPN"><b>RouterAI (Россия)</b><small>российский сервис · серверы в РФ · оплата картой РФ в рублях · без VPN</small></button><button type="button" role="radio" aria-checked="false" class="prov-btn" onclick="pickProv('yandex')" aria-label="Яндекс (YandexGPT)российский сервис · вход через Яндекс ID"><b>Яндекс (YandexGPT)</b><small>российский сервис · вход через Яндекс ID</small></button><button type="button" role="radio" aria-checked="false" class="prov-btn" onclick="pickProv('deepseek')" aria-label="DeepSeekсайт открывается из России · нужно пополнить баланс"><b>DeepSeek</b><small>сайт открывается из России · нужно пополнить баланс</small></button></div>
+    <div class="prov-list" id="provList" role="radiogroup" aria-label="Нейросеть"><button type="button" role="radio" aria-checked="true" class="prov-btn sel" onclick="pickProv('routerai')"><b>RouterAI (Россия)</b><small>российский сервис · серверы в РФ · оплата картой РФ в рублях · без VPN</small></button><button type="button" role="radio" aria-checked="false" class="prov-btn" onclick="pickProv('yandex')"><b>Яндекс (YandexGPT)</b><small>российский сервис · вход через Яндекс ID</small></button><button type="button" role="radio" aria-checked="false" class="prov-btn" onclick="pickProv('deepseek')"><b>DeepSeek</b><small>сайт открывается из России · нужно пополнить баланс</small></button></div>
     <div class="prov-info" id="provInfo"><ol><li>Нажмите «Получить ключ», зарегистрируйтесь и войдите.</li><li>Пополните баланс в разделе «Оплата» (карта российского банка или СБП; хватит 100–200 ₽ – один разбор ответа стоит копейки).</li><li>Нажмите «Создать ключ», скопируйте его и вернитесь на вкладку с уроком.</li></ol></div>
     <a class="get-key" id="getKeyLink" href="https://routerai.ru/settings/keys" target="_blank" rel="noopener" onclick="keyGoGet()">🔑 Получить ключ →</a>
     <p class="prov-back">Страница откроется в <b>новой вкладке</b>. Скопируйте ключ и закройте её (или вернитесь на эту вкладку) – урок останется на месте.</p>
@@ -996,7 +996,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
   </div>
 </div>
 
-<div id="blkMenu" role="menu" aria-label="Действия с элементом"></div>
+<div id="blkMenu" role="menu" aria-label="Действия с элементом" class=""></div>
 
 <div class="blk-modal" id="blkTokBox" role="dialog" aria-modal="true">
   <div class="blk-modal-in">
@@ -1039,8 +1039,8 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 
 <div class="blk-modal" id="blkInfoBox" role="dialog" aria-modal="true">
   <div class="blk-modal-in">
-    <h3 id="blkInfoTitle">Сообщение</h3>
-    <p id="blkInfoText"></p>
+    <h3 id="blkInfoTitle">Сохранено</h3>
+    <p id="blkInfoText">Обновление появится на сайте примерно через 30 секунд. Откройте ссылку заново — все увидят новую версию.</p>
     <div class="blk-modal-acts"><button onclick="blkHide('blkInfoBox')" aria-label="Понятно">Понятно</button></div>
   </div>
 </div>
