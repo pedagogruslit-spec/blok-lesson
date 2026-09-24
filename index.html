@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>«Поэт в России – больше, чем поэт». Александр Блок – рабочий лист урока</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Yeseva+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600;1,700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Yeseva+One&amp;display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#17130E; --ink-soft:#4A4038;
@@ -616,28 +615,28 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 @media print{ .poet-lib,.poem-tools{display:none !important;} }
 </style>
 </head>
-<body>
-<script id="blkCleaner"></script>
+<body class="">
+<script id="blkCleaner">try{localStorage.removeItem('blok_edits');localStorage.removeItem('blok_photos');localStorage.removeItem('blok_layout');localStorage.removeItem('blok_audio');localStorage.setItem('blok_unsaved','false');}catch(e){}</script>
 
 <div class="topbar">
   <span class="tb-title editable-el" data-id="tb-title">Поэт в России – больше, чем поэт · А. Блок</span>
   <div class="tb-actions">
     <span class="cloud-badge">Облако: <span id="cloudCount">0</span> слов</span>
     <button class="tb-btn" id="aiBtn" onclick="openKey()" aria-label="Подключение ИИ-проверки">ИИ: выкл</button>
-    <button class="tb-btn" id="soundBtn" onclick="toggleSound()">Звук: вкл</button>
-    <button class="tb-btn" id="musicBtn" onclick="toggleMusic()">Музыка ▷</button>
-    <button class="tb-btn" id="themeBtn" onclick="toggleTheme()">Светлая тема</button>
-    <button class="tb-btn" id="blkSaveTop" onclick="blkSaveToGithub()">💾 Сохранить</button>
-    <button class="tb-btn" id="editToggle" onclick="askTeacher()">🔑 Войти в режим учителя</button>
+    <button class="tb-btn" id="soundBtn" onclick="toggleSound()" aria-label="Звук: вкл">Звук: вкл</button>
+    <button class="tb-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Музыка ▷">Музыка ▷</button>
+    <button class="tb-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Светлая тема">Светлая тема</button>
+    <button class="tb-btn" id="blkSaveTop" onclick="blkSaveToGithub()" aria-label="💾 Сохранить">💾 Сохранить</button>
+    <button class="tb-btn" id="editToggle" onclick="askTeacher()" aria-label="🔑 Войти в режим учителя">🔑 Войти в режим учителя</button>
   </div>
 </div>
 
 <section id="hero">
   <div class="hero-inner">
     <span class="hero-eyebrow eyebrow">Урок литературы · Александр Блок</span>
-    <div class="portrait-slot photo-slot" data-id="p-hero" onclick="handlePhotoClick(this,event)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-      <img alt="Портрет Блока">
+    <div class="portrait-slot photo-slot has-photo" data-id="p-hero" onclick="handlePhotoClick(this,event)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg>
+      <img alt="Портрет Блока" src="https://kemrsl.ru/assets/cache_image/assets/img/news/CKO/gorab/blok_0x0_eb0.jpg" referrerpolicy="no-referrer" style="transform-origin: center center; transform: translate(0%, 0%) scale(1);">
     </div>
     <h1 class="editable-el" data-id="hero-h1">«Поэт в России – больше, чем поэт»</h1>
     <p class="hero-sub editable-el" data-id="hero-sub">Путь Александра Блока и стихотворение «О, я хочу безумно жить…»</p>
@@ -655,22 +654,57 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 
 <!-- ============ BLOCK 1. БИОГРАФИЯ ============ -->
 <section class="section wrap" id="block1">
-  <div class="section-head">
+  <div class="section-head reveal"><svg class="sec-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 20h5V4H3zM10 20h5V8h-5zM17 20h4V12h-4z"></path></svg>
     <span class="section-num">Блок 1 · Биография</span>
     <h2 class="editable-el" data-id="b1-h2">Лестница восьми ступеней</h2>
     <p class="section-lead editable-el" data-id="b1-lead">Каждый эпизод отвечает на один вопрос: каким нужно быть человеком, чтобы за тобой признали право называться поэтом. Открывайте карточки по очереди – с каждой в облако внизу страницы приплывает новое слово.</p>
   </div>
-  <div id="episodesBox"></div>
-  <div class="order-game" id="orderGame">
-    <h4>Восстановите лестницу</h4>
-    <p>Кликайте по формулам в том порядке, в котором они появлялись по ходу пути Блока.</p>
-    <div class="order-chips" id="orderChips"></div>
+  <div id="episodesBox" data-baked="1"><div class="epi reveal" data-thesis="Дитя лирической волны">
+      <div class="epi-head" role="button" tabindex="0" aria-label="Открыть эпизод: Детство" onclick="toggleEpi(this.parentElement)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEpi(this.parentElement)}">
+        <span class="epi-num">1</span><h3 class="editable-el" data-id="eph-1">Детство</h3><span class="epi-arrow">▾</span>
+      </div>
+      <div class="epi-body"><div class="epi-body-in"><div class="photo-slot" data-id="p-epi1" onclick="handlePhotoClick(this,event)"><span>Детство</span><img alt="Детство"></div><div class="epi-quote editable-el" data-id="epq-1">«С раннего детства я помню постоянно набегавшие на меня лирические волны, еле связанные ещё с чьим-либо именем»<small>Автобиография, 1915</small></div><p class="editable-el" data-id="ept-1-0">Блок родился в ректорском флигеле университета – дед, ботаник Андрей Николаевич Бекетов, был ректором. В доме Бекетовых стихи не были редкостью: бабушка Елизавета Григорьевна переводила и сама писала, мать Александра Андреевна обожала единственного сына и сохранила его черновики с пятилетнего возраста – случай уникальный даже для русской литературы.</p><p class="editable-el" data-id="ept-1-1">Но обратите внимание, как сам Блок пишет об этом много лет спустя: он не помнит начала. Он помнит только «постоянно набегавшие лирические волны» – ещё до того, как у них появилось хоть какое-то имя или повод. То есть в самом начале пути поэта нет ни темы, ни таланта к сочинительству в привычном смысле – есть особая чувствительность, которая старше любых слов.</p><div class="epi-thesis">Дитя лирической волны</div></div></div>
+    </div><div class="epi reveal" data-thesis="Актёр и провидец">
+      <div class="epi-head" role="button" tabindex="0" aria-label="Открыть эпизод: Люба Менделеева и домашний театр" onclick="toggleEpi(this.parentElement)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEpi(this.parentElement)}">
+        <span class="epi-num">2</span><h3 class="editable-el" data-id="eph-2">Люба Менделеева и домашний театр</h3><span class="epi-arrow">▾</span>
+      </div>
+      <div class="epi-body"><div class="epi-body-in"><div class="photo-slot" data-id="p-epi2" onclick="handlePhotoClick(this,event)"><span>Люба Менделеева и домашний театр</span><img alt="Люба Менделеева и домашний театр"></div><p class="editable-el" data-id="ept-2-0">Когда Саше Блоку было три года, а Любе Менделеевой – два, они гуляли по одному и тому же университетскому двору с разными няньками – и ни разу друг друга не заметили. Отец Любы, химик Дмитрий Иванович Менделеев, в шутку звал детей «принцем» и «принцессой». Прошло пятнадцать лет – и та же самая пара, уже гимназистами, встретилась в Шахматове и Боблове, но теперь сблизилась на почве домашнего театра: играли «Гамлета», Блок – Гамлета, Менделеева – Офелию.</p><p class="editable-el" data-id="ept-2-1">Спросите себя: почему именно эта роль? Гамлет – тот, кто видит скрытое от других и не может об этом молчать, даже когда это разрушает его собственную жизнь. Ещё не написав ни одной зрелой строчки, юноша уже проживает на сцене формулу будущего поэта: того, кто видит два мира одновременно.</p><div class="epi-thesis">Актёр и провидец</div></div></div>
+    </div><div class="epi reveal" data-thesis="Рыцарь-монах">
+      <div class="epi-head" role="button" tabindex="0" aria-label="Открыть эпизод: Владимир Соловьёв" onclick="toggleEpi(this.parentElement)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEpi(this.parentElement)}">
+        <span class="epi-num">3</span><h3 class="editable-el" data-id="eph-3">Владимир Соловьёв</h3><span class="epi-arrow">▾</span>
+      </div>
+      <div class="epi-body"><div class="epi-body-in"><div class="photo-slot" data-id="p-epi3" onclick="handlePhotoClick(this,event)"><span>Владимир Соловьёв</span><img alt="Владимир Соловьёв"></div><div class="epi-quote editable-el" data-id="epq-3">«Что такое огромный книжный труд Соловьёва… Только щит и меч – в руках рыцаря, добрые дела – в жизни монаха… Это одно земное дело: дело освобождения пленной Царевны, Мировой Души…»<small>А. Блок, «Рыцарь-монах», 1910</small></div><p class="editable-el" data-id="ept-3-0">В университетские годы Блок видел философа и поэта Владимира Соловьёва вживую всего один раз в жизни – но идеи Соловьёва определят следующие двадцать лет. Соловьёв учил, что за грубой оболочкой мира скрыта Мировая Душа, и что задача избранных – своим служением приблизить её явление. Десять лет спустя Блок придумает для Соловьёва формулу «рыцарь-монах».</p><p class="editable-el" data-id="ept-3-1">Приглядитесь: описывая учителя, он на самом деле формулирует программу для себя. У него уже есть чувствительность и уже есть проверенная на сцене роль провидца – теперь появляется цель, ради которой это стоит превращать в поэзию: не развлекать, а служить.</p><div class="epi-thesis">Рыцарь-монах</div></div></div>
+    </div><div class="epi reveal" data-thesis="Жрец, признанный своими">
+      <div class="epi-head" role="button" tabindex="0" aria-label="Открыть эпизод: Первая книга: рождение поэта из прогулки" onclick="toggleEpi(this.parentElement)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEpi(this.parentElement)}">
+        <span class="epi-num">4</span><h3 class="editable-el" data-id="eph-4">Первая книга: рождение поэта из прогулки</h3><span class="epi-arrow">▾</span>
+      </div>
+      <div class="epi-body"><div class="epi-body-in"><div class="photo-slot" data-id="p-epi4" onclick="handlePhotoClick(this,event)"><span>Первая книга: рождение поэта из прогулки</span><img alt="Первая книга: рождение поэта из прогулки"></div><p class="editable-el" data-id="ept-4-0">Первая книга «Стихи о Прекрасной Даме» (1904, название придумал В. Брюсов) открывается строчкой «Вхожу я в тёмные храмы» – обратите внимание уже не на образ, а на глагол: не «пишу», не «влюблён» – «вхожу», «совершаю обряд». Это ровно та роль жреца, которую мы обсудили как цель в предыдущем эпизоде, теперь она облечена в слова.</p><p class="editable-el" data-id="ept-4-1">А вот пример того, как именно это происходит технически. В одном из стихотворений первого тома есть загадочные строки про «пять изгибов сокровенных» и мистические числа. Похоже на чистую фантазию. Но в 1918 году, готовя комментированное издание, Блок сам объяснил: он встретил Любовь Дмитриевну на Васильевском острове, шёл за ней следом от Андреевской площади по шестой линии до десятой, незамеченный, – «отсюда появились "пять изгибов"». Пять поворотов петербургской улицы, обычная слежка влюблённого гимназиста – вот и весь реальный сюжет. Вот он, момент рождения поэта, подтверждённый документально, а не как красивая метафора.</p><p class="editable-el" data-id="ept-4-2">И это признание пришло быстро. В 1904 году московский кружок символистов, «аргонавты» во главе с Андреем Белым, торжественно посвящает Блока «в поэты». Сам он пишет матери: «Кричат, что я первый поэт в России». Ему двадцать четыре года.</p><div class="epi-thesis">Жрец, признанный своими</div></div></div>
+    </div><div class="epi reveal" data-thesis="Тот, кто платит за дар («трансцендентный хулиган»)">
+      <div class="epi-head" role="button" tabindex="0" aria-label="Открыть эпизод: Незнакомка: цена дара" onclick="toggleEpi(this.parentElement)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEpi(this.parentElement)}">
+        <span class="epi-num">5</span><h3 class="editable-el" data-id="eph-5">Незнакомка: цена дара</h3><span class="epi-arrow">▾</span>
+      </div>
+      <div class="epi-body"><div class="epi-body-in"><div class="photo-slot" data-id="p-epi5" onclick="handlePhotoClick(this,event)"><span>Незнакомка: цена дара</span><img alt="Незнакомка: цена дара"></div><p class="editable-el" data-id="ept-5-0">В первой книге был храм. В «Незнакомке» (1906) – ресторан, где сквозь пьяный чад герою является видение с «очами синими бездонными». Единство первой книги сменяется расколом: в одном и том же стихотворении соседствуют строфы пошлости и строфы тайны. И вот что важно: именно за эту перемену Блока перестают понимать самые близкие. Прежние друзья по московскому кружку не прощают ему «Незнакомки» и пьесы «Балаганчик», разрывают отношения, называют «трансцендентным хулиганом». Получается, что в тот момент, когда Блок становится взрослым, самостоятельным поэтом, – он теряет часть тех, кто его как поэта когда-то признал.</p><p class="editable-el" data-id="ept-5-1">Через несколько лет он напишет стихотворение о ночной аптеке на канале (1912) – с реальным адресом на Малой Невке, на Петроградской стороне. Когда знакомый заметил, что и возле его собственного дома есть точно такая же аптека, Блок ответил: «Возле каждого дома есть такая аптека». Тот же человек, который различает тайну в облике Незнакомки, вынужден видеть и дурную бесконечность обычной улицы – без права отвернуться. Дар видеть больше не выбирается по желанию.</p><div class="epi-thesis">Тот, кто платит за дар («трансцендентный хулиган»)</div></div></div>
+    </div><div class="epi reveal" data-thesis="Гражданин, вочеловечивающий эпоху">
+      <div class="epi-head" role="button" tabindex="0" aria-label="Открыть эпизод: Революция и Россия: личное становится общим" onclick="toggleEpi(this.parentElement)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEpi(this.parentElement)}">
+        <span class="epi-num">6</span><h3 class="editable-el" data-id="eph-6">Революция и Россия: личное становится общим</h3><span class="epi-arrow">▾</span>
+      </div>
+      <div class="epi-body"><div class="epi-body-in"><div class="photo-slot" data-id="p-epi6" onclick="handlePhotoClick(this,event)"><span>Революция и Россия: личное становится общим</span><img alt="Революция и Россия: личное становится общим"></div><div class="epi-quote editable-el" data-id="epq-6">«…все стихи вместе – "трилогия вочеловечения"… к рождению человека "общественного", художника, мужественно глядящего в лицо миру…»<small>Письмо А. Белому, 1911</small></div><p class="editable-el" data-id="ept-6-0">Сам Блок в письме другу Андрею Белому назвал весь свой путь «трилогией вочеловечения» – рождением художника, «мужественно глядящего в лицо миру». Ключевое слово здесь – «вочеловечение»: личное чувство обретает лицо целой страны. Прекрасная Дама первой книги и Россия из стихов третьей – по сути, один и тот же образ на разных этапах одного пути.</p><p class="editable-el" data-id="ept-6-1">Когда в 1918 году начинается революция, Блок принимает её тем же способом, каким принимал всё в жизни, – он слушает. «Всем телом, всем сердцем, всем сознанием – слушайте революцию», – пишет он в статье «Интеллигенция и революция». За три недели, 8–28 января 1918 года, он пишет поэму «Двенадцать». При этом человеком он остаётся совсем не пафосным: когда в голодном 1919 году знакомый Корней Чуковский в шутку написал, что «наш магический, наш светозарный Блок» променял поэзию на «дровяной паёк», Блок ответил в той же лёгкой манере, без всякой позы – он вообще не выносил лжи и позы ни в жизни, ни в стихах.</p><div class="epi-thesis">Гражданин, вочеловечивающий эпоху</div></div></div>
+    </div><div class="epi reveal" data-thesis="Сын гармонии">
+      <div class="epi-head" role="button" tabindex="0" aria-label="Открыть эпизод: Речь о назначении поэта: итог пути" onclick="toggleEpi(this.parentElement)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEpi(this.parentElement)}">
+        <span class="epi-num">7</span><h3 class="editable-el" data-id="eph-7">Речь о назначении поэта: итог пути</h3><span class="epi-arrow">▾</span>
+      </div>
+      <div class="epi-body"><div class="epi-body-in"><div class="photo-slot" data-id="p-epi7" onclick="handlePhotoClick(this,event)"><span>Речь о назначении поэта: итог пути</span><img alt="Речь о назначении поэта: итог пути"></div><div class="epi-quote editable-el" data-id="epq-7">«Поэт – сын гармонии; и ему дана какая-то роль в мировой культуре… Покой и воля… И поэт умирает, потому что дышать ему уже нечем; жизнь потеряла смысл»<small>А. Блок, «О назначении поэта», 1921</small></div><p class="editable-el" data-id="ept-7-0">Весной 1921 года на одном из выступлений из зала крикнули, что Блок исписался, что он литературный мертвец. Знакомым он признался: выступавший прав. Музыка, которую он слышал всю жизнь, начиная с тех самых «лирических волн» из второго эпизода, ушла. 13 февраля 1921 года он произносит речь, которую мы только что прочитали, – итог всего пути: поэт не развлекает, а служит гармонии; и если ему мешают дышать, он не меняет профессию, а умирает буквально.</p><p class="editable-el" data-id="ept-7-1">7 августа 1921 года Блок умирает от болезни сердца, так и не дождавшись разрешения на лечение за границей – оно пришло на несколько дней позже.</p><div class="epi-thesis">Сын гармонии</div></div></div>
+    </div></div>
+  <div class="order-game reveal" id="orderGame">
+    <h4 class="">Восстановите лестницу</h4>
+    <p class="">Кликайте по формулам в том порядке, в котором они появлялись по ходу пути Блока.</p>
+    <div class="order-chips" id="orderChips" data-baked="1"><button class="order-chip" data-t="Тот, кто платит за дар («трансцендентный хулиган»)" aria-label="Тот, кто платит за дар («трансцендентный хулиган»)">Тот, кто платит за дар («трансцендентный хулиган»)</button><button class="order-chip" data-t="Рыцарь-монах" aria-label="Рыцарь-монах">Рыцарь-монах</button><button class="order-chip" data-t="Гражданин, вочеловечивающий эпоху" aria-label="Гражданин, вочеловечивающий эпоху">Гражданин, вочеловечивающий эпоху</button><button class="order-chip" data-t="Актёр и провидец" aria-label="Актёр и провидец">Актёр и провидец</button><button class="order-chip" data-t="Дитя лирической волны" aria-label="Дитя лирической волны">Дитя лирической волны</button><button class="order-chip" data-t="Сын гармонии" aria-label="Сын гармонии">Сын гармонии</button><button class="order-chip" data-t="Жрец, признанный своими" aria-label="Жрец, признанный своими">Жрец, признанный своими</button></div>
     <div class="order-msg" id="orderMsg"></div>
   </div>
-  <div class="epi" id="epi9" style="display:none">
+  <div class="epi reveal" id="epi9" style="display:none">
     <div class="epi-head" onclick="toggleEpi(this.parentElement)">
       <span class="epi-num">Итог</span>
-      <h3>Облако собрано – что оно значит</h3>
+      <h3 class="">Облако собрано – что оно значит</h3>
       <span class="epi-arrow">▾</span>
     </div>
     <div class="epi-body"><div class="epi-body-in">
@@ -678,33 +712,189 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
       <p class="editable-el" data-id="epi9-p2">Почему поэт в России – больше, чем поэт? Потому что путь, пройденный по восьми ступеням, – не редкое исключение, а модель: случайная прогулка становится мистической формулой; детская роль на дачном спектакле – судьбой; личная влюблённость – образом целой страны. Такой поэт не выбирает, что видеть, и не может остановиться на полпути: он служит не читателю и не моде, а, по его собственному слову, гармонии – и, когда служить нечем, не меняет профессию, а перестаёт жить. Именно поэтому в России от поэта ждут не мастерства, а судьбы.</p>
     </div></div>
   </div>
-</section>
+</section><div class="ornament reveal"><span>✦</span></div>
 
-<p class="bridge">Теперь, когда путь пройден, послушаем самого поэта: именно в стихах Блок отвечает на наш вопрос.</p>
+<p class="bridge reveal">Теперь, когда путь пройден, послушаем самого поэта: именно в стихах Блок отвечает на наш вопрос.</p>
 
 <!-- ============ BLOCK 2. ПОЭЗИЯ ============ -->
 <section class="section wrap" id="block2">
-  <div class="section-head">
+  <div class="section-head reveal"><svg class="sec-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 4c-6 0-9 4-11 9l-2 5 5-2c5-2 8-6 8-12z"></path><path d="M7 18l4-4"></path></svg>
     <span class="section-num">Блок 2 · Поэзия</span>
     <h2 class="editable-el" data-id="b2-h2">«О, я хочу безумно жить…»</h2>
     <p class="section-lead editable-el" data-id="b2-lead">Почему поэт в России – больше, чем поэт? Будем искать ответ в стихах самого Блока – строфа за строфой, вопрос за вопросом.</p>
   </div>
-  <div id="poemFlow"></div>
-</section>
+  <div id="poemFlow" data-baked="1"><div class="poem-block editable-el reveal" data-id="note-1"><h4 class="">Проблемная ситуация</h4><p class="">«Что такое поэт? Человек, который пишет стихами? Нет, конечно» – так сам Блок спрашивал в одной из последних своих речей.</p><p class=""><b>Вопрос урока:</b> почему поэт в России – больше, чем поэт? Не спешите отвечать – это главный вопрос всего разбора, и подробный, обоснованный ответ на него мы соберём только в самом конце, когда разберём стихотворение и сопоставим Блока с Пушкиным.</p></div><div class="note-box editable-el reveal" data-id="note-2"><p class="">Каждый поэт видел свою задачу по-своему. Вот как её понимал Пушкин…</p></div><div class="poem-block editable-el reveal" data-id="note-3"><h4 class="">А. С. Пушкин, «Поэт» (1827)</h4><div class="photo-slot" data-id="p-pushkin" onclick="handlePhotoClick(this,event)"><span>А. С. Пушкин</span><img alt="А. С. Пушкин"></div><p class="stanza" style="font-size:17px;">Пока не требует поэта<br>К священной жертве Аполлон,<br>В заботах суетного света<br>Он малодушно погружён;<br>Молчит его святая лира;<br>Душа вкушает хладный сон,<br>И меж детей ничтожных мира,<br>Быть может, всех ничтожней он.<br>Но лишь божественный глагол<br>До слуха чуткого коснётся,<br>Душа поэта встрепенётся,<br>Как пробудившийся орёл.</p></div><div class="qcard reveal" id="q-p2">
+    <p class="qtext editable-el" data-id="qt-p2">Каким предстаёт поэт, пока его «не требует» Аполлон, – и каким он становится, услышав «божественный глагол»?</p>
+    <textarea id="ta-p2" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-p2" onclick="checkAnswer('p2')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-p2" aria-live="polite"></div>
+    <div class="qreveal" id="rv-p2"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-p2">В обычной жизни он такой же, как все, даже «всех ничтожней», его душа спит. Но когда приходит вдохновение, он преображается – «как пробудившийся орёл».</p></div>
+  </div><div class="note-box gated editable-el reveal" data-id="note-4" data-after="p2"><p class="">Пушкин называет служение поэта «священной жертвой». Значит, быть больше, чем поэтом, – это и отдавать больше. У Пушкина душа поэта – пробудившийся орёл. У Блока тоже есть птица. Посмотрим, что с ней происходит.</p></div><div class="poem-block editable-el reveal" data-id="note-5"><h4 class="">А. Блок, «Художник» (1913)</h4><div class="photo-slot" data-id="p-bird" onclick="handlePhotoClick(this,event)"><span>птица в клетке</span><img alt="птица в клетке"></div><p class="stanza" style="font-size:17px;">И замыкаю я в клетку холодную<br>Лёгкую, добрую птицу свободную,<br>Птицу, хотевшую смерть унести,<br>Птицу, летевшую душу спасти.<br>…<br>Крылья подрезаны, песни заучены.<br>Любите вы под окном постоять?<br>Песни вам нравятся. Я же, измученный,<br>Нового жду – и скучаю опять.</p></div><div class="qcard reveal" id="q-p3">
+    <p class="qtext editable-el" data-id="qt-p3">Что происходит с птицей у Блока? Чем она отличается от пушкинского орла?</p>
+    <textarea id="ta-p3" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-p3" onclick="checkAnswer('p3')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-p3" aria-live="polite"></div>
+    <div class="qreveal" id="rv-p3"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-p3">Орёл у Пушкина пробуждается и взлетает. А у Блока художник сам запирает птицу в клетку и подрезает ей крылья: живое вдохновение, чтобы стать «песней», теряет свободу. Творчество – не только взлёт, но и мука.</p></div>
+  </div><div class="note-box gated editable-el reveal" data-id="note-6" data-after="p3"><p class="">Птица свободная, живая – но её приходится посадить в клетку, подрезать крылья, чтобы получились «заученные песни». Творчество для Блока – не праздник, а мука: поэт расплачивается за право говорить.</p></div><div class="poem-block editable-el reveal" data-id="note-7"><h4 class="">А. Блок, «К Музе» (1912)</h4><p class="stanza" style="font-size:17px;">Есть в напевах твоих сокровенных<br>Роковая о гибели весть.<br>Есть проклятье заветов священных,<br>Поругание счастия есть.</p></div><div class="qcard reveal" id="q-p4">
+    <p class="qtext editable-el" data-id="qt-p4">Почему поэт называет свой дар не радостью, а «роковой вестью о гибели»?</p>
+    <textarea id="ta-p4" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-p4" onclick="checkAnswer('p4')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-p4" aria-live="polite"></div>
+    <div class="qreveal" id="rv-p4"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-p4">Вдохновение забирает что-то взамен – покой, обычное человеческое счастье.</p></div>
+  </div><div class="note-box gated editable-el reveal" data-id="note-8" data-after="p4"><p class="">Дар поэта у Блока – это цена, которую платишь заранее: муза даёт голос и забирает покой. Так начинается ответ на вопрос урока: поэт в России платит за своё слово больше, чем обычный человек.</p></div><div class="poem-block editable-el reveal" data-id="note-9"><h4 class="">А. Блок, «Жизнь» (раннее)</h4><p class="">Но если дар – это только тяжесть, что заставляет поэта снова и снова писать? У Блока рядом с этой тяжестью всегда жила и другая сила – жадная, горячая любовь к жизни.</p><p class="stanza" style="font-size:17px;">Мы рождены; вдыхаем жадно<br>Природы мощные дары;<br>Нам мнится – дышит беспощадно<br>Жизнь, занесённая в миры.<br>…<br>О, нет! Горящей жизни меру<br>Не нам познать и разгадать.</p></div><div class="qcard reveal" id="q-p5">
+    <p class="qtext editable-el" data-id="qt-p5">Как поэт чувствует жизнь? С помощью каких слов мы это понимаем?</p>
+    <textarea id="ta-p5" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-p5" onclick="checkAnswer('p5')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-p5" aria-live="polite"></div>
+    <div class="qreveal" id="rv-p5"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-p5">Жизнь у Блока не дремлет: она «дышит беспощадно», её дары – «мощные», вдыхать их приходится «жадно», а мера её – «горящая». Слова дыхания и огня рисуют жизнь как стихию, которую нельзя измерить и разгадать – только прожить взахлёб.</p></div>
+  </div><div class="note-box editable-el reveal" data-id="note-10"><p class="">А теперь вернёмся к нашему стихотворению. Слушая его, подумайте: что значит жить безумно – и какую цену за это платит герой?</p></div><div class="poem-block reveal"><h4 class="">Александр Блок · 5 февраля 1914</h4><div class="poem-tools"><button type="button" class="poem-audio-btn" id="poemAudioBtn" aria-expanded="false" aria-controls="poemAudioPanel" aria-label="Слушать стихотворение: выбрать запись" onclick="poemAudioToggle()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"></path><path d="M15.5 9a4 4 0 0 1 0 6"></path><path d="M18 6.5a7.5 7.5 0 0 1 0 11"></path></svg><span>Слушать стихотворение</span></button><div class="poem-audio-panel" id="poemAudioPanel"></div></div><div class="photo-slot" data-id="p-poem" onclick="handlePhotoClick(this,event)"><span>иллюстрация к стихотворению</span><img alt="иллюстрация к стихотворению"></div><p class="stanza" id="stanza1">О, я хочу безумно жить:<br>Всё сущее – <span class="pw" data-w="увековечить">увековечить</span>,<br>Безличное – <span class="pw" data-w="вочеловечить">вочеловечить</span>,<br>Несбывшееся – <span class="pw" data-w="воплотить">воплотить</span>!</p><p class="stanza" id="stanza2">Пусть душит жизни сон тяжёлый,<br>Пусть задыхаюсь в этом сне, –<br>Быть может, юноша весёлый<br>В грядущем скажет обо мне:</p><p class="stanza" id="stanza3">Простим угрюмство – разве это<br>Сокрытый двигатель его?<br>Он весь – дитя добра и света,<br>Он весь – свободы торжество!</p></div><div class="qcard reveal" id="q-p7">
+    <p class="qtext editable-el" data-id="qt-p7">Как развивается настроение в стихотворении от строфы к строфе? Какие картины рисует поэт?</p>
+    <textarea id="ta-p7" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-p7" onclick="checkAnswer('p7')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-p7" aria-live="polite"></div>
+    <div class="qreveal" id="rv-p7"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-p7">Первая строфа – порыв и клятва: героя переполняет жажда жить и творить. Во второй настроение темнеет: жизнь оборачивается «тяжёлым сном», от которого можно задохнуться. Третья возвращает свет: перед героем встаёт «юноша весёлый» будущего – «дитя добра и света», и стихотворение завершается торжеством свободы.</p></div>
+  </div><div class="note-box editable-el reveal" data-id="note-11"><p style="font-family:'Yeseva One',serif; font-size:15px; letter-spacing:.02em;" class="">Строфа 1</p></div><div class="verbtask reveal" id="verbtask">
+    <h5 class="">Задача: три глагола</h5>
+    <p class="editable-el" data-id="vt-p">Назовите своими словами то, ради чего герой хочет жить безумно. Нажмите «Найти слова», поднимитесь к тексту стихотворения и кликните прямо в строфе на нужные слова.</p>
+    <div class="verbtask-actions">
+      <button class="link-btn" onclick="scrollToPoemTask()" aria-label="Найти слова ↑">Найти слова ↑</button>
+      <button class="qcheck-btn" onclick="checkVerbSelection()" aria-label="Проверить выделение">Проверить выделение</button>
+    </div>
+    <div class="verb-status" id="verbStatus"></div>
+    <div class="match-wrap" id="matchWrap" style="display:none;"></div>
+    <div class="qreveal" id="rv-verbtask"><span class="rlabel">Ответ</span><p class="">Увековечить – сделать вечным то, что уже есть. Вочеловечить – дать человеческую душу тому, в чём её нет. Воплотить – превратить в реальность то, чего никогда не было.</p></div>
+  </div><div class="qcard reveal" id="q-s1q2">
+    <p class="qtext editable-el" data-id="qt-s1q2">Чем эти задачи отличаются друг от друга? Какая из них самая трудная?</p>
+    <textarea id="ta-s1q2" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-s1q2" onclick="checkAnswer('s1q2')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-s1q2" aria-live="polite"></div>
+    <div class="qreveal" id="rv-s1q2"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s1q2">Увековечить – сохранить то, что уже есть («всё сущее»). Вочеловечить – дать душу тому, в чём её нет («безличное»). Воплотить – создать то, чего никогда не было («несбывшееся»). Задачи становятся всё труднее: от сохранения существующего – к сотворению небывалого.</p></div>
+  </div><div class="qcard reveal" id="q-s1q3">
+    <p class="qtext editable-el" data-id="qt-s1q3">Почему лирический герой говорит «хочу жить», а не «хочу творить»?</p>
+    <textarea id="ta-s1q3" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-s1q3" onclick="checkAnswer('s1q3')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-s1q3" aria-live="polite"></div>
+    <div class="qreveal" id="rv-s1q3"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s1q3">Для него жить и творить – одно и то же. Жизнь без этих задач – не жизнь.</p></div>
+  </div><div class="note-box gated editable-el reveal" data-id="note-12" data-after="s1q3"><p class="">Лирический герой замахивается на то, что под силу, кажется, только Творцу. Недаром «вочеловечение» – слово из церковного языка. Для Блока оно было ключевым: весь свой путь в поэзии он назвал «трилогией вочеловечения» – путём к «рождению человека общественного», художника, «мужественно глядящего в лицо миру».</p></div><div class="note-box editable-el reveal" data-id="note-13"><p style="font-family:'Yeseva One',serif; font-size:15px;" class="">Строфа 2</p></div><div class="qcard reveal" id="q-s2q1">
+    <p class="qtext editable-el" data-id="qt-s2q1">С чем смиряется лирический герой во второй строфе?</p>
+    <textarea id="ta-s2q1" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-s2q1" onclick="checkAnswer('s2q1')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-s2q1" aria-live="polite"></div>
+    <div class="qreveal" id="rv-s2q1"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s2q1">С тяжёлым сном жизни, который его «душит», – он задыхается в нём.</p></div>
+  </div><div class="qcard reveal" id="q-s2q2">
+    <p class="qtext editable-el" data-id="qt-s2q2">Как меняется интонация по сравнению с первой строфой? С помощью каких слов это передано?</p>
+    <textarea id="ta-s2q2" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-s2q2" onclick="checkAnswer('s2q2')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-s2q2" aria-live="polite"></div>
+    <div class="qreveal" id="rv-s2q2"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s2q2">Вместо восклицания-клятвы – уступка: «пусть… пусть…». Лирический герой соглашается терпеть удушье, но в этом «пусть» звучит и упрямство: пусть душит – всё равно.</p></div>
+  </div><div class="qcard reveal" id="q-s2q3">
+    <p class="qtext editable-el" data-id="qt-s2q3">Какой конфликт заложен в стихотворении?</p>
+    <textarea id="ta-s2q3" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-s2q3" onclick="checkAnswer('s2q3')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-s2q3" aria-live="polite"></div>
+    <div class="qreveal" id="rv-s2q3"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s2q3">Жажда вечного, желание одушевить и преобразить мир – и тяжёлый, удушающий «сон» реальной жизни.</p></div>
+  </div><div class="note-box gated editable-el reveal" data-id="note-14" data-after="s2q3"><p class="">Лирический герой не бежит из тяжёлого сна и не делает вид, что его нет. Он принимает удушье – и продолжает хотеть жить. Вспомните Пушкина: там душа поэта тоже «вкушает хладный сон» – до тех пор, пока её не разбудит вдохновение.</p></div><div class="note-box editable-el reveal" data-id="note-15"><p style="font-family:'Yeseva One',serif; font-size:15px;" class="">Строфа 3</p></div><div class="qcard reveal" id="q-s3q1">
+    <p class="qtext editable-el" data-id="qt-s3q1">К кому обращены мысли лирического героя в третьей строфе?</p>
+    <textarea id="ta-s3q1" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-s3q1" onclick="checkAnswer('s3q1')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-s3q1" aria-live="polite"></div>
+    <div class="qreveal" id="rv-s3q1"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s3q1">К человеку из будущего – «юноше весёлому», который однажды скажет о поэте своё слово.</p></div>
+  </div><div class="qcard reveal" id="q-s3q2">
+    <p class="qtext editable-el" data-id="qt-s3q2">Какой смысл Блок вкладывает в образ «юноши весёлого» – почему поэт обращается именно к будущему поколению и почему оно именно «весёлое», а не «угрюмое»?</p>
+    <textarea id="ta-s3q2" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-s3q2" onclick="checkAnswer('s3q2')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-s3q2" aria-live="polite"></div>
+    <div class="qreveal" id="rv-s3q2"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s3q2">Юноша – это новое поколение, будущее. «Весёлый» – полная противоположность «сну тяжёлому» и «угрюмству»: он живёт легко и радостно. Поэт задыхается сейчас – чтобы тем, кто придёт после, жилось светлее.</p></div>
+  </div><div class="qcard reveal" id="q-s3q3">
+    <p class="qtext editable-el" data-id="qt-s3q3">Почему «в грядущем»? Что это значит для творчества поэта?</p>
+    <textarea id="ta-s3q3" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-s3q3" onclick="checkAnswer('s3q3')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-s3q3" aria-live="polite"></div>
+    <div class="qreveal" id="rv-s3q3"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s3q3">Поэт пишет не только для своего времени: его слово переживёт его самого. Это и есть «увековечить» – первая задача из первой строфы.</p></div>
+  </div><div class="qcard reveal" id="q-s3q4">
+    <p class="qtext editable-el" data-id="qt-s3q4">Какое противопоставление звучит в третьей строфе?</p>
+    <textarea id="ta-s3q4" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-s3q4" onclick="checkAnswer('s3q4')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-s3q4" aria-live="polite"></div>
+    <div class="qreveal" id="rv-s3q4"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s3q4">«Угрюмство» – и «дитя добра и света», «свободы торжество».</p></div>
+  </div><div class="qcard reveal" id="q-s3q5">
+    <p class="qtext editable-el" data-id="qt-s3q5">Для чего поэт приводит эти противопоставления и как в итоге разрешается конфликт?</p>
+    <textarea id="ta-s3q5" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-s3q5" onclick="checkAnswer('s3q5')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-s3q5" aria-live="polite"></div>
+    <div class="qreveal" id="rv-s3q5"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-s3q5">Творчество сильнее жизненных невзгод. Конфликт между «тяжёлым сном» реальности и идеалом разрешается через веру в будущее и преображающую силу искусства – добро, свет и надежда на то, что будущий читатель поймёт и оправдает искания поэта.</p></div>
+  </div><div class="note-box gated editable-el reveal" data-id="note-16" data-after="s3q5"><p class="">Стихотворение замыкается в кольцо: финал открывает, что двигало героем с первой строки. Внутри тяжёлого сна жизни он разглядел вечные ценности – и отдал им себя «весь».</p></div><div class="qcard reveal" id="q-itog1">
+    <p class="qtext editable-el" data-id="qt-itog1">Вернёмся к вопросу, заданному в начале анализа: что значит для лирического героя жить безумно – и какую цену он за это платит?</p>
+    <textarea id="ta-itog1" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-itog1" onclick="checkAnswer('itog1')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-itog1" aria-live="polite"></div>
+    <div class="qreveal" id="rv-itog1"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-itog1">Жить безумно – значит жить творя: браться за непосильное – увековечить сущее, вочеловечить безличное, воплотить несбывшееся. Принять тяжесть жизни – и не сдаться. Отдать творчеству себя «всего», чтобы сквозь угрюмство донести до будущих поколений добро и свет. Цена – тяжесть, угрюмство, непонимание современников. Награда – «свободы торжество», победа духа.</p></div>
+  </div><div class="note-box gated editable-el reveal" data-id="note-17" data-after="itog1"><p class="">Выходит, «безумие» лирического героя – не безрассудство, а жизнь на пределе ради других. Но кто эти «другие», и чей это «тяжёлый сон»? Здесь мы подходим к ответу на вопрос урока.</p></div><div class="poem-block editable-el reveal" data-id="note-18"><h4 class="">А. Блок, «Рождённые в года глухие» (сентябрь 1914)</h4><p class="stanza" style="font-size:17px;">Рождённые в года глухие<br>Пути не помнят своего.<br>Мы – дети страшных лет России –<br>Забыть не в силах ничего.</p></div><div class="qcard reveal" id="q-r1">
+    <p class="qtext editable-el" data-id="qt-r1">Какой образ нашего стихотворения перекликается с этими строками?</p>
+    <textarea id="ta-r1" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-r1" onclick="checkAnswer('r1')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-r1" aria-live="polite"></div>
+    <div class="qreveal" id="rv-r1"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-r1">«Сон тяжёлый»: и «сон», и «глухие годы» – это тяжесть, оцепенение, время, когда трудно найти путь.</p></div>
+  </div><div class="qcard reveal" id="q-r2">
+    <p class="qtext editable-el" data-id="qt-r2">О чьей же жизни говорит поэт, когда пишет «душит жизни сон тяжёлый» – только ли о своей?</p>
+    <textarea id="ta-r2" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-r2" onclick="checkAnswer('r2')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-r2" aria-live="polite"></div>
+    <div class="qreveal" id="rv-r2"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-r2">Не только о своей: это тяжёлое время целой страны. Поэт переживает его вместе с Россией и говорит от лица поколения – «мы»: значит, и «безумно жить» он хочет не только за себя, а за судьбу России.</p></div>
+  </div><div class="qcard reveal" id="q-r3">
+    <p class="qtext editable-el" data-id="qt-r3">Стихотворение не заканчивается тяжестью. Вспомните последнюю строку – «свободы торжество». О чём это говорит: только ли о личной судьбе поэта?</p>
+    <textarea id="ta-r3" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-r3" onclick="checkAnswer('r3')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-r3" aria-live="polite"></div>
+    <div class="qreveal" id="rv-r3"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-r3">Нет: «Несбывшееся – воплотить!» – поэт мечтает не только о себе, но и о свободном, преображённом будущем России. Значит, за тяжестью «сна» стоит не отчаяние, а любовь к Родине и вера в её перемены.</p></div>
+  </div><div class="note-box gated editable-el reveal" data-id="note-19" data-after="r3"><p class="">Поэт у Блока не наблюдает за судьбой России со стороны – он говорит от лица своего поколения и переживает вместе со страной её «тяжёлый сон». Но именно из этой тяжести рождается его любовь к Родине и вера в перемены.</p></div><div class="qcard reveal" id="q-final1">
+    <p class="qtext editable-el" data-id="qt-final1">Теперь ответим на вопрос урока: почему поэт в России больше, чем поэт?</p>
+    <textarea id="ta-final1" rows="3" placeholder="Ваш ответ…" aria-label="Ваш ответ" oninput="autoGrow(this)"></textarea>
+    <div class="qhint">Пишите своими словами – после ответа появится разбор.</div>
+    <button class="qcheck-btn" id="btn-final1" onclick="checkAnswer('final1')" aria-label="Проверить ответ">Проверить</button>
+    <div class="qfeedback" id="fb-final1" aria-live="polite"></div>
+    <div class="qreveal" id="rv-final1"><span class="rlabel">Возможный ответ</span><p class="editable-el" data-id="qs-final1">Потому что в России слово поэта слишком часто становилось словом за всех. Блок – «дитя страшных лет» – хочет «безумно жить» за целое поколение: вочеловечить безличное, воплотить несбывшееся, вынести «тяжёлый сон» эпохи и всё же поверить в «свободы торжество». Он служит тому, что, по его собственным словам, «больше меня, больше всех нас», – и потому в его голосе звучит уже не одна судьба, а судьба страны.</p></div>
+  </div><div class="letter gated editable-el reveal" data-id="note-20" data-after="final1"><blockquote class="">«Этой теме я сознательно и бесповоротно посвящаю жизнь. Всё ярче сознаю, что это – первейший вопрос, самый жизненный, самый реальный. … Она не только больше меня, она больше всех нас».</blockquote><cite class="">Из письма К. С. Станиславскому, 1908</cite><p class="letter-out">Вот, пожалуй, и ответ: поэт в России больше, чем поэт, потому что служит тому, что больше его самого.</p></div><div class="qcard reveal" id="q-refl">
+    <p class="qtext editable-el" data-id="qt-refl">Какое чувство в этом стихотворении для вас главное?</p>
+    <div class="rgrid"><button class="rcard" style="--g:linear-gradient(160deg,#F3C969,#D9740D)" data-k="свет" onclick="pickRefl('свет')" aria-label="Чувство: свет"><span class="ic">☀️</span>свет</button><button class="rcard" style="--g:linear-gradient(160deg,#7FB2E5,#4E3B57)" data-k="полёт" onclick="pickRefl('полёт')" aria-label="Чувство: полёт"><span class="ic">🕊️</span>полёт</button><button class="rcard" style="--g:linear-gradient(160deg,#7A6A66,#2B2220)" data-k="тяжесть" onclick="pickRefl('тяжесть')" aria-label="Чувство: тяжесть"><span class="ic">🪨</span>тяжесть</button><button class="rcard" style="--g:linear-gradient(160deg,#A5CF86,#3E6B3A)" data-k="надежда" onclick="pickRefl('надежда')" aria-label="Чувство: надежда"><span class="ic">🌱</span>надежда</button><button class="rcard" style="--g:linear-gradient(160deg,#6F5A9E,#1F1830)" data-k="одиночество" onclick="pickRefl('одиночество')" aria-label="Чувство: одиночество"><span class="ic">🌙</span>одиночество</button><button class="rcard" style="--g:linear-gradient(160deg,#E7B04A,#8B2E3A)" data-k="торжество" onclick="pickRefl('торжество')" aria-label="Чувство: торжество"><span class="ic">✨</span>торжество</button></div>
+    <input class="why" id="why-refl" placeholder="Почему? (по желанию)" aria-label="Почему вы выбрали это чувство">
+    <button class="qcheck-btn" onclick="saveReflection('refl')" aria-label="Зафиксировать выбор">Зафиксировать</button>
+    <div class="qfeedback" id="fb-refl" aria-live="polite"></div>
+  </div></div>
+</section><div class="ornament reveal"><span>✦</span></div>
 
-<p class="bridge">Слова накопились – посмотрим, что из них сложилось.</p>
+<p class="bridge reveal">Слова накопились – посмотрим, что из них сложилось.</p>
 
 <!-- ============ BLOCK 3. ОБЛАКО СЛОВ ============ -->
 <section class="section wrap" id="block3">
-  <div class="section-head">
+  <div class="section-head reveal"><svg class="sec-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3l2.3 6.1L21 11l-6.7 1.9L12 19l-2.3-6.1L3 11l6.7-1.9z"></path></svg>
     <span class="section-num">Блок 3 · Итог урока</span>
     <h2 class="editable-el" data-id="b3-h2">Кто Блок?</h2>
     <p class="section-lead editable-el" data-id="b3-lead">Облако выросло из вашей работы: формулы из биографии, ключевые слова разбора и ваши собственные слова. Чем чаще слово звучало – тем крупнее оно здесь.</p>
   </div>
   <div class="cloud-box" id="cloudBox"><span class="cloud-empty" id="cloudEmpty">Облако пока пусто – начните с первого эпизода биографии.</span></div>
   <div class="finish-panel">
-    <button class="finish-btn" onclick="finishWork()">Завершить работу и скачать результаты</button>
-    <div class="qcard" id="aiSummary" aria-live="polite"></div>
+    <button class="finish-btn" onclick="finishWork()" aria-label="Завершить работу и скачать результаты">Завершить работу и скачать результаты</button>
+    <div class="qcard reveal" id="aiSummary" aria-live="polite" style="display: none;"></div>
   </div>
 </section>
 
@@ -712,9 +902,9 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 <section class="poet-lib wrap" id="poetLib" aria-label="Читать стихи Александра Блока">
   <details>
     <summary>
-      <svg class="pl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5C6.5 4.4 9.5 4.4 12 6c2.5-1.6 5.5-1.6 8-.5v13c-2.5-1.1-5.5-1.1-8 .5-2.5-1.6-5.5-1.6-8-.5z"/><path d="M12 6v13"/></svg>
+      <svg class="pl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5C6.5 4.4 9.5 4.4 12 6c2.5-1.6 5.5-1.6 8-.5v13c-2.5-1.1-5.5-1.1-8 .5-2.5-1.6-5.5-1.6-8-.5z"></path><path d="M12 6v13"></path></svg>
       <span class="pl-head"><span class="pl-title">Читать стихи Александра Блока</span><span class="pl-sub">Ссылки на российские сайты – откройте и читайте дальше</span></span>
-      <svg class="pl-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      <svg class="pl-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
     </summary>
     <div class="pl-body">
       <p class="pl-lead">Стихотворение урока и другие тексты Блока – на сайтах, которые открываются в России. Ссылки откроются в новой вкладке.</p>
@@ -741,14 +931,14 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
   </details>
 </section>
 
-<footer>Урок «Поэт в России – больше, чем поэт». Материалы: И. Н. Сухих, «Литература. 11 класс».</footer>
+<footer class="">Урок «Поэт в России – больше, чем поэт». Материалы: И. Н. Сухих, «Литература. 11 класс».</footer>
 
 <div class="login-box" id="loginBox">
   <div class="login-in">
     <h3 style="margin-bottom:6px;">Вход для учителя</h3>
     <p style="font-size:14px; opacity:.7; margin:0;">Введите пароль, чтобы редактировать страницу</p>
     <input type="password" id="teacherPass" placeholder="Пароль">
-    <div><button onclick="checkTeacherPass()">Войти</button> <button onclick="closeLogin()" style="background:none; color:var(--ink); border:1px solid var(--line);">Отмена</button></div>
+    <div><button onclick="checkTeacherPass()" aria-label="Войти">Войти</button> <button onclick="closeLogin()" style="background:none; color:var(--ink); border:1px solid var(--line);" aria-label="Отмена">Отмена</button></div>
   </div>
 </div>
 
@@ -761,12 +951,12 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <a class="get-key" id="getKeyLink" href="#" target="_blank" rel="noopener" onclick="keyGoGet()">🔑 Получить ключ →</a>
     <p class="prov-back">Страница откроется в <b>новой вкладке</b>. Скопируйте ключ и закройте её (или вернитесь на эту вкладку) – урок останется на месте.</p>
     <input type="text" id="keyFolder" placeholder="Идентификатор каталога, например b1g…" autocomplete="off" aria-label="Идентификатор каталога Яндекса" style="display:none">
-    <div class="key-row"><input type="password" id="keyInput" placeholder="Ключ" autocomplete="off" aria-label="Ключ API" onkeydown="if(event.key==='Enter')saveKey()"><button type="button" class="ghost" onclick="pasteKey()">📋 Вставить</button></div>
+    <div class="key-row"><input type="password" id="keyInput" placeholder="Ключ" autocomplete="off" aria-label="Ключ API" onkeydown="if(event.key==='Enter')saveKey()"><button type="button" class="ghost" onclick="pasteKey()" aria-label="📋 Вставить">📋 Вставить</button></div>
     <div class="key-msg" id="keyMsg" aria-live="polite"></div>
-    <div><button onclick="saveKey()">Подключить</button> <button class="ghost" onclick="skipKey()">Без ИИ</button></div>
+    <div><button onclick="saveKey()" aria-label="Подключить">Подключить</button> <button class="ghost" onclick="skipKey()" aria-label="Без ИИ">Без ИИ</button></div>
   </div>
 </div>
-<button class="key-return" id="keyReturn" onclick="keyReturnClick()">🔑 Получили ключ? Вернуться к подключению ИИ</button>
+<button class="key-return" id="keyReturn" onclick="keyReturnClick()" aria-label="🔑 Получили ключ? Вернуться к подключению ИИ">🔑 Получили ключ? Вернуться к подключению ИИ</button>
 <button class="thought-fab" onclick="toggleThoughts()" aria-label="Зафиксировать мысль">✎ Зафиксировать мысль</button>
 <div class="thought-panel" id="thoughtPanel">
   <textarea id="thoughtInput" placeholder="Мысль, слово, образ…" aria-label="Ваша мысль" oninput="autoGrow(this)"></textarea>
@@ -776,7 +966,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 
 <div class="edit-bar">
   <span>Вы в режиме учителя</span>
-  <button onclick="downloadHTML()">Скачать HTML</button>
+  <button onclick="downloadHTML()" aria-label="Скачать HTML">Скачать HTML-копию</button>
 </div>
 
 <div class="floatback" id="floatBack" onclick="backToVerbTask()">↓ Вернуться к заданию</div>
@@ -784,13 +974,13 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 
 
 <!-- ============ v3: ПАНЕЛЬ РЕДАКТОРА, МЕНЮ, МОДАЛКИ ============ -->
-<div id="blkToolbar" aria-label="Панель редактирования">
-  <button onclick="blkAddAtEnd()">+ Новый блок в конце страницы</button>
-  <button onclick="blkDuplicateLast()">⧉ Дублировать последний блок</button>
-  <button onclick="blkToggleChrome()" id="blkChromeBtn">👁 Скрыть кнопки редактора</button>
-  <button onclick="blkResetEdits()">↺ Сбросить правки</button>
-  <button class="save-main" id="blkSaveBtn" onclick="blkSaveToGithub()">💾 Сохранить</button>
-  <span id="blkSaveState">Всё сохранено</span>
+<div id="blkToolbar" aria-label="Панель редактирования" style="top: 109px;">
+  <button onclick="blkAddAtEnd()" aria-label="+ Новый блок в конце страницы">+ Новый блок в конце страницы</button>
+  <button onclick="blkDuplicateLast()" aria-label="⧉ Дублировать последний блок">⧉ Дублировать последний блок</button>
+  <button onclick="blkToggleChrome()" id="blkChromeBtn" aria-label="👁 Скрыть кнопки редактора">👁 Скрыть кнопки редактора</button>
+  <button onclick="blkResetEdits()" aria-label="↺ Сбросить правки">↺ Сбросить правки</button>
+  <button class="save-main" id="blkSaveBtn" onclick="blkSaveToGithub()" aria-label="💾 Сохранить" disabled="">💾 Сохранить</button>
+  <span id="blkSaveState" class="busy">Сохраняю…</span>
 </div>
 
 <div id="blkMenu" role="menu" aria-label="Действия с элементом"></div>
@@ -804,7 +994,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <label style="font-size:13px;opacity:.75;">Токен GitHub</label>
     <input type="password" id="blkTokVal" placeholder="github_pat_…" autocomplete="off" style="width:100%;margin:4px 0 10px;padding:10px;font:inherit;" onkeydown="if(event.key==='Enter')blkTokSubmit()">
     <div id="blkTokMsg" style="color:#B0463A;font-size:14px;min-height:18px;margin-bottom:8px;" aria-live="polite"></div>
-    <button onclick="blkTokSubmit()">Сохранить на GitHub</button> <button class="ghost" onclick="blkHide('blkTokBox')">Отмена</button>
+    <button onclick="blkTokSubmit()" aria-label="Сохранить на GitHub">Сохранить на GitHub</button> <button class="ghost" onclick="blkHide('blkTokBox')" aria-label="Отмена">Отмена</button>
   </div>
 </div>
 <div class="blk-modal" id="blkConflictBox" role="dialog" aria-modal="true">
@@ -817,8 +1007,8 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     </ol>
     <p style="opacity:.7;font-size:14px;">Ваши текущие правки остались в этом окне браузера — если они важны, скопируйте текст перед обновлением.</p>
     <div class="blk-modal-acts">
-      <button onclick="location.reload(true)">Обновить страницу</button>
-      <button class="ghost" onclick="blkHide('blkConflictBox')">Отмена</button>
+      <button onclick="location.reload(true)" aria-label="Обновить страницу">Обновить страницу</button>
+      <button class="ghost" onclick="blkHide('blkConflictBox')" aria-label="Отмена">Отмена</button>
     </div>
   </div>
 </div>
@@ -828,8 +1018,8 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <h3>Есть несохранённые изменения</h3>
     <p>В этом браузере остались правки, которые вы не отправили на сайт. Они уже видны на странице. Сохранить их на GitHub, чтобы их увидели все?</p>
     <div class="blk-modal-acts">
-      <button onclick="blkHide('blkDraftBox'); blkSaveToGithub();">Сохранить</button>
-      <button class="ghost" onclick="blkDropDraft()">Отменить и загрузить с GitHub</button>
+      <button onclick="blkHide('blkDraftBox'); blkSaveToGithub();" aria-label="Сохранить">Сохранить</button>
+      <button class="ghost" onclick="blkDropDraft()" aria-label="Отменить и загрузить с GitHub">Отменить и загрузить с GitHub</button>
     </div>
   </div>
 </div>
@@ -838,7 +1028,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
   <div class="blk-modal-in">
     <h3 id="blkInfoTitle">Сообщение</h3>
     <p id="blkInfoText"></p>
-    <div class="blk-modal-acts"><button onclick="blkHide('blkInfoBox')">Понятно</button></div>
+    <div class="blk-modal-acts"><button onclick="blkHide('blkInfoBox')" aria-label="Понятно">Понятно</button></div>
   </div>
 </div>
 
@@ -850,7 +1040,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
       <label class="ph-lab" for="blkPhQuery">Что искать в Яндексе</label>
       <div class="ph-row">
         <input type="text" id="blkPhQuery" class="blk-field" autocomplete="off" onkeydown="if(event.key==='Enter'){event.preventDefault();blkPhSearch();}">
-        <button type="button" class="ph-main" onclick="blkPhSearch()">🔎 Найти в Яндексе</button>
+        <button type="button" class="ph-main" onclick="blkPhSearch()" aria-label="🔎 Найти в Яндексе">🔎 Найти в Яндексе</button>
       </div>
       <ol class="ph-steps">
         <li>Яндекс.Картинки откроются в новой вкладке. Выберите фото и откройте его.</li>
@@ -858,16 +1048,16 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
         <li>Вернитесь на эту вкладку и нажмите «Вставить» (или Ctrl+V).</li>
       </ol>
       <div class="ph-row">
-        <button type="button" class="ph-main" onclick="blkPhPasteBtn()">📋 Вставить</button>
-        <button type="button" class="ph-ghost" onclick="blkPhGallery()">📁 Из галереи</button>
+        <button type="button" class="ph-main" onclick="blkPhPasteBtn()" aria-label="📋 Вставить">📋 Вставить</button>
+        <button type="button" class="ph-ghost" onclick="blkPhGallery()" aria-label="📁 Из галереи">📁 Из галереи</button>
       </div>
       <label class="ph-lab" for="blkPhUrl">Или ссылка на картинку</label>
       <div class="ph-row">
         <input type="text" id="blkPhUrl" class="blk-field" placeholder="https://…" autocomplete="off" onkeydown="if(event.key==='Enter'){event.preventDefault();blkPhUrlGo();}">
-        <button type="button" class="ph-ghost" onclick="blkPhUrlGo()">Загрузить</button>
+        <button type="button" class="ph-ghost" onclick="blkPhUrlGo()" aria-label="Загрузить">Загрузить</button>
       </div>
       <div class="ph-msg" id="blkPhMsg" aria-live="polite"></div>
-      <div class="blk-modal-acts"><button type="button" class="ghost" onclick="blkPhClose()">Отмена</button></div>
+      <div class="blk-modal-acts"><button type="button" class="ghost" onclick="blkPhClose()" aria-label="Отмена">Отмена</button></div>
     </div>
     <div class="ph-step2">
       <h3>Обрезка</h3>
@@ -876,9 +1066,9 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
       <input type="range" id="blkCropZoom" min="1" max="4" step="0.01" value="1" oninput="blkPhZoom(this.value)" aria-label="Масштаб фото">
       <div class="ph-note" id="blkPhNote"></div>
       <div class="blk-modal-acts">
-        <button type="button" onclick="blkPhAttach()">✔ Прикрепить</button>
-        <button type="button" class="ghost" onclick="blkPhCenter()">↺ По центру</button>
-        <button type="button" class="ghost" onclick="blkPhBack()">← Другое фото</button>
+        <button type="button" onclick="blkPhAttach()" aria-label="✔ Прикрепить">✔ Прикрепить</button>
+        <button type="button" class="ghost" onclick="blkPhCenter()" aria-label="↺ По центру">↺ По центру</button>
+        <button type="button" class="ghost" onclick="blkPhBack()" aria-label="← Другое фото">← Другое фото</button>
       </div>
     </div>
   </div>
@@ -893,13 +1083,13 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <label class="ph-lab" for="paAddTitle">Название записи (по желанию)</label>
     <input type="text" id="paAddTitle" class="blk-field" placeholder="Например: Чтение в студии, 1970-е" autocomplete="off">
     <label class="ph-lab">Аудиофайл (до 2 МБ)</label>
-    <div class="ph-row"><button type="button" class="ph-ghost" onclick="document.getElementById('paFileInput').click()">📁 Выбрать файл</button><span id="paFileName" style="font-size:14px;align-self:center;"></span></div>
+    <div class="ph-row"><button type="button" class="ph-ghost" onclick="document.getElementById('paFileInput').click()" aria-label="📁 Выбрать файл">📁 Выбрать файл</button><span id="paFileName" style="font-size:14px;align-self:center;"></span></div>
     <label class="ph-lab" for="paAddLink">…или прямая ссылка на аудио</label>
     <input type="text" id="paAddLink" class="blk-field" placeholder="https://…/чтение.mp3 или audio/чтение.mp3" autocomplete="off">
     <div class="ph-msg" id="paAddMsg" style="color:#B0463A" aria-live="polite"></div>
     <div class="blk-modal-acts">
-      <button type="button" onclick="poemAudioAddSubmit()">Добавить</button>
-      <button type="button" class="ghost" onclick="blkHide('paAddBox')">Отмена</button>
+      <button type="button" onclick="poemAudioAddSubmit()" aria-label="Добавить">Добавить</button>
+      <button type="button" class="ghost" onclick="blkHide('paAddBox')" aria-label="Отмена">Отмена</button>
     </div>
   </div>
 </div>
@@ -3173,5 +3363,6 @@ window.addEventListener('pagehide',()=>{ try{ ttsStop(); }catch(e){} });
 })();
 
 </script>
-</body>
-</html>
+
+
+</body></html>
