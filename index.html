@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light"><head>
+<html lang="ru" data-theme="dark"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>«Поэт в России – больше, чем поэт». Александр Блок – рабочий лист урока</title>
@@ -624,7 +624,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <button class="tb-btn" id="aiBtn" onclick="openKey()" aria-label="Подключение ИИ-проверки">ИИ: выкл</button>
     <button class="tb-btn" id="soundBtn" onclick="toggleSound()" aria-label="Звук: вкл">Звук: вкл</button>
     <button class="tb-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Музыка ▷">Музыка ▮▮</button>
-    <button class="tb-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Светлая тема">Тёмная тема</button>
+    <button class="tb-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Светлая тема">Светлая тема</button>
     <button class="tb-btn" id="blkSaveTop" onclick="blkSaveToGithub()" aria-label="💾 Сохранить">💾 Сохранить</button>
     <button class="tb-btn" id="editToggle" onclick="askTeacher()" aria-label="🔑 Войти в режим учителя">🔑 Войти в режим учителя</button>
   </div>
@@ -663,7 +663,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
         <span class="epi-num">1</span><h3 class="editable-el" data-id="eph-1">Детство</h3><span class="epi-arrow">▾</span>
       </div>
       <div class="epi-body"><div class="epi-body-in"><div class="epi-quote editable-el" data-id="epq-1">«С раннего детства я помню постоянно набегавшие на меня лирические волны, еле связанные ещё с чьим-либо именем»<small>Автобиография, 1915</small></div><p class="editable-el" data-id="ept-1-0">Блок родился в ректорском флигеле университета – дед, ботаник Андрей Николаевич Бекетов, был ректором. В доме Бекетовых стихи не были редкостью: бабушка Елизавета Григорьевна переводила и сама писала, мать Александра Андреевна обожала единственного сына и сохранила его черновики с пятилетнего возраста – случай уникальный даже для русской литературы.</p><p class="editable-el" data-id="ept-1-1">Но обратите внимание, как сам Блок пишет об этом много лет спустя: он не помнит начала. Он помнит только «постоянно набегавшие лирические волны» – ещё до того, как у них появилось хоть какое-то имя или повод. То есть в самом начале пути поэта нет ни темы, ни таланта к сочинительству в привычном смысле – есть особая чувствительность, которая старше любых слов.</p><div class="epi-thesis">Дитя лирической волны</div></div></div>
-    </div><div class="photo-slot has-photo" data-id="p-new-1790228945802" onclick="handlePhotoClick(this,event)"><span>иллюстрация</span><img alt="иллюстрация" src="https://xn--80aejhegcdgppl4alw.xn--p1ai/images/phocagallery/2023/11/11-28/4.jpg" referrerpolicy="no-referrer" style="transform-origin: center center; transform: translate(0%, 28.493%) scale(1);"></div><div class="note-box"><div class="photo-slot" data-id="p-nmuf3x8hv" onclick="handlePhotoClick(this,event)"><span>нажмите, чтобы вставить фото</span><img alt="иллюстрация"></div><p class="">Подпись к изображению.</p></div><div class="epi reveal" data-thesis="Актёр и провидец">
+    </div><div class="note-box"><div class="photo-slot has-photo" data-id="p-nmuf3x8hv" onclick="handlePhotoClick(this,event)"><span>нажмите, чтобы вставить фото</span><img alt="иллюстрация" src="https://www.culture.ru/_next/image?url=https%3A%2F%2Fcdn.culture.ru%2Fimages%2Ff5bcbf86-a9a6-5925-80c8-f2dae410f664%2Fw_1020%2Cc_fill%2Cg_center%2F8.jpg&amp;w=1920&amp;q=75" referrerpolicy="no-referrer" style="transform-origin: center center; transform: translate(0%, 26.005%) scale(1);"></div><p class="">Подпись к изображению.</p></div><div class="epi reveal" data-thesis="Актёр и провидец">
       <div class="epi-head" role="button" tabindex="0" aria-label="Открыть эпизод: Люба Менделеева и домашний театр" onclick="toggleEpi(this.parentElement)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEpi(this.parentElement)}">
         <span class="epi-num">2</span><h3 class="editable-el" data-id="eph-2">Люба Менделеева и домашний театр</h3><span class="epi-arrow">▾</span>
       </div>
@@ -957,7 +957,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 </div>
 <button class="key-return" id="keyReturn" onclick="keyReturnClick()" aria-label="🔑 Получили ключ? Вернуться к подключению ИИ">🔑 Получили ключ? Вернуться к подключению ИИ</button>
 <button class="thought-fab" onclick="toggleThoughts()" aria-label="Зафиксировать мысль">✎ Зафиксировать мысль</button>
-<div class="thought-panel" id="thoughtPanel">
+<div class="thought-panel" id="thoughtPanel" style="display: block;">
   <textarea id="thoughtInput" placeholder="Мысль, слово, образ…" aria-label="Ваша мысль" oninput="autoGrow(this)"></textarea>
   <button onclick="addThought()" aria-label="Добавить мысль в облако">В облако</button>
   <ul id="thoughtList"></ul>
