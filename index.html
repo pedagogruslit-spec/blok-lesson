@@ -624,7 +624,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <span class="cloud-badge">Облако: <span id="cloudCount">0</span> слов</span>
     <button class="tb-btn" id="aiBtn" onclick="openKey()" aria-label="Подключение ИИ-проверки">ИИ: выкл</button>
     <button class="tb-btn" id="soundBtn" onclick="toggleSound()" aria-label="Звук: вкл">Звук: вкл</button>
-    <button class="tb-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Музыка ▷">Музыка ▷</button>
+    <button class="tb-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Музыка ▷">Музыка ▮▮</button>
     <button class="tb-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Светлая тема">Светлая тема</button>
     <button class="tb-btn" id="blkSaveTop" onclick="blkSaveToGithub()" aria-label="💾 Сохранить">💾 Сохранить</button>
     <button class="tb-btn" id="editToggle" onclick="askTeacher()" aria-label="🔑 Войти в режим учителя">🔑 Войти в режим учителя</button>
@@ -634,9 +634,9 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 <section id="hero">
   <div class="hero-inner">
     <span class="hero-eyebrow eyebrow">Урок литературы · Александр Блок</span>
-    <div class="portrait-slot photo-slot has-photo" data-id="p-hero" onclick="handlePhotoClick(this,event)">
+    <div class="portrait-slot photo-slot" data-id="p-hero" onclick="handlePhotoClick(this,event)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg>
-      <img alt="Портрет Блока" src="https://kemrsl.ru/assets/cache_image/assets/img/news/CKO/gorab/blok_0x0_eb0.jpg" referrerpolicy="no-referrer" style="transform-origin: center center; transform: translate(0%, 0%) scale(1);">
+      <img alt="Портрет Блока">
     </div>
     <h1 class="editable-el" data-id="hero-h1">«Поэт в России – больше, чем поэт»</h1>
     <p class="hero-sub editable-el" data-id="hero-sub">Путь Александра Блока и стихотворение «О, я хочу безумно жить…»</p>
@@ -698,7 +698,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
   <div class="order-game reveal" id="orderGame">
     <h4 class="">Восстановите лестницу</h4>
     <p class="">Кликайте по формулам в том порядке, в котором они появлялись по ходу пути Блока.</p>
-    <div class="order-chips" id="orderChips" data-baked="1"><button class="order-chip" data-t="Тот, кто платит за дар («трансцендентный хулиган»)" aria-label="Тот, кто платит за дар («трансцендентный хулиган»)">Тот, кто платит за дар («трансцендентный хулиган»)</button><button class="order-chip" data-t="Рыцарь-монах" aria-label="Рыцарь-монах">Рыцарь-монах</button><button class="order-chip" data-t="Гражданин, вочеловечивающий эпоху" aria-label="Гражданин, вочеловечивающий эпоху">Гражданин, вочеловечивающий эпоху</button><button class="order-chip" data-t="Актёр и провидец" aria-label="Актёр и провидец">Актёр и провидец</button><button class="order-chip" data-t="Дитя лирической волны" aria-label="Дитя лирической волны">Дитя лирической волны</button><button class="order-chip" data-t="Сын гармонии" aria-label="Сын гармонии">Сын гармонии</button><button class="order-chip" data-t="Жрец, признанный своими" aria-label="Жрец, признанный своими">Жрец, признанный своими</button></div>
+    <div class="order-chips" id="orderChips" data-baked="1"><button class="order-chip" data-t="Жрец, признанный своими" aria-label="Жрец, признанный своими">Жрец, признанный своими</button><button class="order-chip" data-t="Рыцарь-монах" aria-label="Рыцарь-монах">Рыцарь-монах</button><button class="order-chip" data-t="Сын гармонии" aria-label="Сын гармонии">Сын гармонии</button><button class="order-chip" data-t="Дитя лирической волны" aria-label="Дитя лирической волны">Дитя лирической волны</button><button class="order-chip" data-t="Гражданин, вочеловечивающий эпоху" aria-label="Гражданин, вочеловечивающий эпоху">Гражданин, вочеловечивающий эпоху</button><button class="order-chip" data-t="Тот, кто платит за дар («трансцендентный хулиган»)" aria-label="Тот, кто платит за дар («трансцендентный хулиган»)">Тот, кто платит за дар («трансцендентный хулиган»)</button><button class="order-chip" data-t="Актёр и провидец" aria-label="Актёр и провидец">Актёр и провидец</button></div>
     <div class="order-msg" id="orderMsg"></div>
   </div>
   <div class="epi reveal" id="epi9" style="display:none">
@@ -946,13 +946,13 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
   <div class="login-in key-in">
     <h3>Подключить ИИ-проверку ответов</h3>
     <p>Выберите нейросеть. Ключ – это как пароль для неё; он хранится только в этом браузере и отправляется только выбранному сервису. Без ИИ урок тоже работает.</p>
-    <div class="prov-list" id="provList" role="radiogroup" aria-label="Нейросеть"></div>
-    <div class="prov-info" id="provInfo"></div>
-    <a class="get-key" id="getKeyLink" href="#" target="_blank" rel="noopener" onclick="keyGoGet()">🔑 Получить ключ →</a>
+    <div class="prov-list" id="provList" role="radiogroup" aria-label="Нейросеть"><button type="button" role="radio" aria-checked="true" class="prov-btn sel" onclick="pickProv('routerai')"><b>RouterAI (Россия)</b><small>российский сервис · серверы в РФ · оплата картой РФ в рублях · без VPN</small></button><button type="button" role="radio" aria-checked="false" class="prov-btn" onclick="pickProv('yandex')"><b>Яндекс (YandexGPT)</b><small>российский сервис · вход через Яндекс ID</small></button><button type="button" role="radio" aria-checked="false" class="prov-btn" onclick="pickProv('deepseek')"><b>DeepSeek</b><small>сайт открывается из России · нужно пополнить баланс</small></button></div>
+    <div class="prov-info" id="provInfo"><ol><li>Нажмите «Получить ключ», зарегистрируйтесь и войдите.</li><li>Пополните баланс в разделе «Оплата» (карта российского банка или СБП; хватит 100–200 ₽ – один разбор ответа стоит копейки).</li><li>Нажмите «Создать ключ», скопируйте его и вернитесь на вкладку с уроком.</li></ol></div>
+    <a class="get-key" id="getKeyLink" href="https://routerai.ru/settings/keys" target="_blank" rel="noopener" onclick="keyGoGet()">🔑 Получить ключ →</a>
     <p class="prov-back">Страница откроется в <b>новой вкладке</b>. Скопируйте ключ и закройте её (или вернитесь на эту вкладку) – урок останется на месте.</p>
     <input type="text" id="keyFolder" placeholder="Идентификатор каталога, например b1g…" autocomplete="off" aria-label="Идентификатор каталога Яндекса" style="display:none">
-    <div class="key-row"><input type="password" id="keyInput" placeholder="Ключ" autocomplete="off" aria-label="Ключ API" onkeydown="if(event.key==='Enter')saveKey()"><button type="button" class="ghost" onclick="pasteKey()" aria-label="📋 Вставить">📋 Вставить</button></div>
-    <div class="key-msg" id="keyMsg" aria-live="polite"></div>
+    <div class="key-row"><input type="password" id="keyInput" placeholder="Ключ RouterAI" autocomplete="off" aria-label="Ключ API" onkeydown="if(event.key==='Enter')saveKey()"><button type="button" class="ghost" onclick="pasteKey()" aria-label="📋 Вставить">📋 Вставить</button></div>
+    <div class="key-msg" id="keyMsg" aria-live="polite" style="color: inherit;"></div>
     <div><button onclick="saveKey()" aria-label="Подключить">Подключить</button> <button class="ghost" onclick="skipKey()" aria-label="Без ИИ">Без ИИ</button></div>
   </div>
 </div>
@@ -974,7 +974,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 
 
 <!-- ============ v3: ПАНЕЛЬ РЕДАКТОРА, МЕНЮ, МОДАЛКИ ============ -->
-<div id="blkToolbar" aria-label="Панель редактирования" style="top: 109px;">
+<div id="blkToolbar" aria-label="Панель редактирования" style="top: 39px;">
   <button onclick="blkAddAtEnd()" aria-label="+ Новый блок в конце страницы">+ Новый блок в конце страницы</button>
   <button onclick="blkDuplicateLast()" aria-label="⧉ Дублировать последний блок">⧉ Дублировать последний блок</button>
   <button onclick="blkToggleChrome()" id="blkChromeBtn" aria-label="👁 Скрыть кнопки редактора">👁 Скрыть кнопки редактора</button>
@@ -1026,8 +1026,8 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 
 <div class="blk-modal" id="blkInfoBox" role="dialog" aria-modal="true">
   <div class="blk-modal-in">
-    <h3 id="blkInfoTitle">Сообщение</h3>
-    <p id="blkInfoText"></p>
+    <h3 id="blkInfoTitle">Пароль не подошёл</h3>
+    <p id="blkInfoText">Проверьте раскладку клавиатуры. Пароль выдаёт автор страницы; пробелы и регистр значения не имеют.</p>
     <div class="blk-modal-acts"><button onclick="blkHide('blkInfoBox')" aria-label="Понятно">Понятно</button></div>
   </div>
 </div>
