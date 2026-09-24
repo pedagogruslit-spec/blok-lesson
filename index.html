@@ -662,7 +662,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
       <div class="epi-head" role="button" tabindex="0" aria-label="Открыть эпизод: Детство" onclick="toggleEpi(this.parentElement)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEpi(this.parentElement)}">
         <span class="epi-num">1</span><h3 class="editable-el" data-id="eph-1">Детство</h3><span class="epi-arrow">▾</span>
       </div>
-      <div class="epi-body"><div class="epi-body-in"><div class="photo-slot" data-id="p-epi1" onclick="handlePhotoClick(this,event)"><span>Детство</span><img alt="Детство"></div><div class="epi-quote editable-el" data-id="epq-1">«С раннего детства я помню постоянно набегавшие на меня лирические волны, еле связанные ещё с чьим-либо именем»<small>Автобиография, 1915</small></div><p class="editable-el" data-id="ept-1-0">Блок родился в ректорском флигеле университета – дед, ботаник Андрей Николаевич Бекетов, был ректором. В доме Бекетовых стихи не были редкостью: бабушка Елизавета Григорьевна переводила и сама писала, мать Александра Андреевна обожала единственного сына и сохранила его черновики с пятилетнего возраста – случай уникальный даже для русской литературы.</p><p class="editable-el" data-id="ept-1-1">Но обратите внимание, как сам Блок пишет об этом много лет спустя: он не помнит начала. Он помнит только «постоянно набегавшие лирические волны» – ещё до того, как у них появилось хоть какое-то имя или повод. То есть в самом начале пути поэта нет ни темы, ни таланта к сочинительству в привычном смысле – есть особая чувствительность, которая старше любых слов.</p><div class="epi-thesis">Дитя лирической волны</div></div></div>
+      <div class="epi-body"><div class="epi-body-in"><div class="photo-slot has-photo" data-id="p-epi1" onclick="handlePhotoClick(this,event)"><span>Детство</span><img alt="Детство" src="https://www.culture.ru/_next/image?url=https%3A%2F%2Fcdn.culture.ru%2Fimages%2Ff5bcbf86-a9a6-5925-80c8-f2dae410f664%2Fw_1020%2Cc_fill%2Cg_center%2F8.jpg&amp;w=1920&amp;q=75" referrerpolicy="no-referrer" style="transform-origin: center center; transform: translate(0%, 14.772%) scale(1);"></div><div class="epi-quote editable-el" data-id="epq-1">«С раннего детства я помню постоянно набегавшие на меня лирические волны, еле связанные ещё с чьим-либо именем»<small>Автобиография, 1915</small></div><p class="editable-el" data-id="ept-1-0">Блок родился в ректорском флигеле университета – дед, ботаник Андрей Николаевич Бекетов, был ректором. В доме Бекетовых стихи не были редкостью: бабушка Елизавета Григорьевна переводила и сама писала, мать Александра Андреевна обожала единственного сына и сохранила его черновики с пятилетнего возраста – случай уникальный даже для русской литературы.</p><p class="editable-el" data-id="ept-1-1">Но обратите внимание, как сам Блок пишет об этом много лет спустя: он не помнит начала. Он помнит только «постоянно набегавшие лирические волны» – ещё до того, как у них появилось хоть какое-то имя или повод. То есть в самом начале пути поэта нет ни темы, ни таланта к сочинительству в привычном смысле – есть особая чувствительность, которая старше любых слов.</p><div class="epi-thesis">Дитя лирической волны</div></div></div>
     </div><div class="epi reveal" data-thesis="Актёр и провидец">
       <div class="epi-head" role="button" tabindex="0" aria-label="Открыть эпизод: Люба Менделеева и домашний театр" onclick="toggleEpi(this.parentElement)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleEpi(this.parentElement)}">
         <span class="epi-num">2</span><h3 class="editable-el" data-id="eph-2">Люба Менделеева и домашний театр</h3><span class="epi-arrow">▾</span>
@@ -890,7 +890,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <h2 class="editable-el" data-id="b3-h2">Кто Блок?</h2>
     <p class="section-lead editable-el" data-id="b3-lead">Облако выросло из вашей работы: формулы из биографии, ключевые слова разбора и ваши собственные слова. Чем чаще слово звучало – тем крупнее оно здесь.</p>
   </div>
-  <div class="cloud-box" id="cloudBox"><span class="cloud-empty" id="cloudEmpty">Облако пока пусто – начните с первого эпизода биографии.</span></div>
+  <div class="cloud-box" id="cloudBox" style="min-height: 560px;"><span class="cloud-empty" id="cloudEmpty">Облако пока пусто – начните с первого эпизода биографии.</span></div>
   <div class="finish-panel">
     <button class="finish-btn" onclick="finishWork()" aria-label="Завершить работу и скачать результаты">Завершить работу и скачать результаты</button>
     <div class="qcard reveal" id="aiSummary" aria-live="polite" style="display: none;"></div>
@@ -973,7 +973,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 
 
 <!-- ============ v3: ПАНЕЛЬ РЕДАКТОРА, МЕНЮ, МОДАЛКИ ============ -->
-<div id="blkToolbar" aria-label="Панель редактирования" style="top: 144px;">
+<div id="blkToolbar" aria-label="Панель редактирования" style="top: 67px;">
   <button onclick="blkAddAtEnd()" aria-label="+ Новый блок в конце страницы">+ Новый блок в конце страницы</button>
   <button onclick="blkDuplicateLast()" aria-label="⧉ Дублировать последний блок">⧉ Дублировать последний блок</button>
   <button onclick="blkToggleChrome()" id="blkChromeBtn" aria-label="👁 Скрыть кнопки редактора">👁 Скрыть кнопки редактора</button>
@@ -991,7 +991,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <input type="text" id="blkTokShowRepo" readonly="" onclick="this.select()" style="width:100%;margin:4px 0 10px;padding:10px;font:inherit;">
     <label style="font-size:13px;opacity:.75;">Токен GitHub</label>
     <input type="text" id="blkTokShowVal" readonly="" onclick="this.select()" style="width:100%;margin:4px 0 10px;padding:10px;font:inherit;">
-    <div id="blkTokShowMsg" style="font-size:14px;min-height:18px;margin-bottom:8px;" aria-live="polite"></div>
+    <div id="blkTokShowMsg" style="font-size:14px;min-height:18px;margin-bottom:8px;" aria-live="polite">Сначала нужно, чтобы ключ был сохранён на этом устройстве.</div>
     <button onclick="blkCopyToken()" aria-label="📋 Скопировать ключ">📋 Скопировать ключ</button> <button class="ghost" onclick="blkHide('blkTokShowBox')" aria-label="Закрыть">Закрыть</button>
   </div>
 </div>
@@ -1075,7 +1075,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <div class="ph-step2">
       <h3>Обрезка</h3>
       <p class="ph-hint">Фото уже обрезано по центру под рамку блока. Чтобы сменить кадр, перетащите фото пальцем или мышью; ползунок меняет масштаб.</p>
-      <div class="ph-frame-wrap"><div class="ph-frame" id="blkCropFrame" style="width: 270px; height: 360px;"><img id="blkCropImg" alt="Предпросмотр фото" referrerpolicy="no-referrer"></div></div>
+      <div class="ph-frame-wrap"><div class="ph-frame" id="blkCropFrame" style="width: 340px; height: 255px;"><img id="blkCropImg" alt="Предпросмотр фото" referrerpolicy="no-referrer"></div></div>
       <input type="range" id="blkCropZoom" min="1" max="4" step="0.01" value="1" oninput="blkPhZoom(this.value)" aria-label="Масштаб фото">
       <div class="ph-note" id="blkPhNote"></div>
       <div class="blk-modal-acts">
