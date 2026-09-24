@@ -634,9 +634,9 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 <section id="hero">
   <div class="hero-inner">
     <span class="hero-eyebrow eyebrow">Урок литературы · Александр Блок</span>
-    <div class="portrait-slot photo-slot" data-id="p-hero" onclick="handlePhotoClick(this,event)">
+    <div class="portrait-slot photo-slot has-photo" data-id="p-hero" onclick="handlePhotoClick(this,event)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg>
-      <img alt="Портрет Блока">
+      <img alt="Портрет Блока" src="https://kemrsl.ru/assets/cache_image/assets/img/news/CKO/gorab/blok_0x0_eb0.jpg" referrerpolicy="no-referrer" style="transform-origin: center center; transform: translate(0%, 0%) scale(1);">
     </div>
     <h1 class="editable-el" data-id="hero-h1">«Поэт в России – больше, чем поэт»</h1>
     <p class="hero-sub editable-el" data-id="hero-sub">Путь Александра Блока и стихотворение «О, я хочу безумно жить…»</p>
@@ -946,7 +946,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
   <div class="login-in key-in">
     <h3>Подключить ИИ-проверку ответов</h3>
     <p>Выберите нейросеть. Ключ – это как пароль для неё; он хранится только в этом браузере и отправляется только выбранному сервису. Без ИИ урок тоже работает.</p>
-    <div class="prov-list" id="provList" role="radiogroup" aria-label="Нейросеть"><button type="button" role="radio" aria-checked="true" class="prov-btn sel" onclick="pickProv('routerai')"><b>RouterAI (Россия)</b><small>российский сервис · серверы в РФ · оплата картой РФ в рублях · без VPN</small></button><button type="button" role="radio" aria-checked="false" class="prov-btn" onclick="pickProv('yandex')"><b>Яндекс (YandexGPT)</b><small>российский сервис · вход через Яндекс ID</small></button><button type="button" role="radio" aria-checked="false" class="prov-btn" onclick="pickProv('deepseek')"><b>DeepSeek</b><small>сайт открывается из России · нужно пополнить баланс</small></button></div>
+    <div class="prov-list" id="provList" role="radiogroup" aria-label="Нейросеть"><button type="button" role="radio" aria-checked="true" class="prov-btn sel" onclick="pickProv('routerai')" aria-label="RouterAI (Россия)российский сервис · серверы в РФ · оплата картой РФ в рублях · без VPN"><b>RouterAI (Россия)</b><small>российский сервис · серверы в РФ · оплата картой РФ в рублях · без VPN</small></button><button type="button" role="radio" aria-checked="false" class="prov-btn" onclick="pickProv('yandex')" aria-label="Яндекс (YandexGPT)российский сервис · вход через Яндекс ID"><b>Яндекс (YandexGPT)</b><small>российский сервис · вход через Яндекс ID</small></button><button type="button" role="radio" aria-checked="false" class="prov-btn" onclick="pickProv('deepseek')" aria-label="DeepSeekсайт открывается из России · нужно пополнить баланс"><b>DeepSeek</b><small>сайт открывается из России · нужно пополнить баланс</small></button></div>
     <div class="prov-info" id="provInfo"><ol><li>Нажмите «Получить ключ», зарегистрируйтесь и войдите.</li><li>Пополните баланс в разделе «Оплата» (карта российского банка или СБП; хватит 100–200 ₽ – один разбор ответа стоит копейки).</li><li>Нажмите «Создать ключ», скопируйте его и вернитесь на вкладку с уроком.</li></ol></div>
     <a class="get-key" id="getKeyLink" href="https://routerai.ru/settings/keys" target="_blank" rel="noopener" onclick="keyGoGet()">🔑 Получить ключ →</a>
     <p class="prov-back">Страница откроется в <b>новой вкладке</b>. Скопируйте ключ и закройте её (или вернитесь на эту вкладку) – урок останется на месте.</p>
@@ -974,7 +974,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
 
 
 <!-- ============ v3: ПАНЕЛЬ РЕДАКТОРА, МЕНЮ, МОДАЛКИ ============ -->
-<div id="blkToolbar" aria-label="Панель редактирования" style="top: 39px;">
+<div id="blkToolbar" aria-label="Панель редактирования" style="top: 144px;">
   <button onclick="blkAddAtEnd()" aria-label="+ Новый блок в конце страницы">+ Новый блок в конце страницы</button>
   <button onclick="blkDuplicateLast()" aria-label="⧉ Дублировать последний блок">⧉ Дублировать последний блок</button>
   <button onclick="blkToggleChrome()" id="blkChromeBtn" aria-label="👁 Скрыть кнопки редактора">👁 Скрыть кнопки редактора</button>
@@ -1062,7 +1062,7 @@ body.edit-mode .pa-add:hover{background:rgba(217,116,13,.12);}
     <div class="ph-step2">
       <h3>Обрезка</h3>
       <p class="ph-hint">Фото уже обрезано по центру под рамку блока. Чтобы сменить кадр, перетащите фото пальцем или мышью; ползунок меняет масштаб.</p>
-      <div class="ph-frame-wrap"><div class="ph-frame" id="blkCropFrame"><img id="blkCropImg" alt="Предпросмотр фото"></div></div>
+      <div class="ph-frame-wrap"><div class="ph-frame" id="blkCropFrame" style="width: 270px; height: 360px;"><img id="blkCropImg" alt="Предпросмотр фото" referrerpolicy="no-referrer"></div></div>
       <input type="range" id="blkCropZoom" min="1" max="4" step="0.01" value="1" oninput="blkPhZoom(this.value)" aria-label="Масштаб фото">
       <div class="ph-note" id="blkPhNote"></div>
       <div class="blk-modal-acts">
